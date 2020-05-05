@@ -1,0 +1,184 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register Your Book</title>
+<link rel="stylesheet" href="style1.css">
+<style>
+
+input{
+border-radius:20px;
+
+}
+</style>
+<script src="jquery-3.3.1.min">
+</script>
+<script src= "https://unpkg.com/sweetalert/dist/sweetalert.min.js">
+</script>
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+-->
+<script>
+
+
+$(document).ready(function(){
+$("input").focusin(function(){
+$(this).css("background-color","#ffff99");
+});
+$("input").focusout(function(){
+
+if ($(this).val() =="") 
+$(this).css( "background-color", "white");
+         else
+         
+        $(this).css("background-color", "#ffff99");
+});
+});
+
+
+
+$(document).ready(function(){
+$("select").focusin(function(){
+$(this).css("background-color","#ffff99");
+});
+$("select").focusout(function(){
+
+if ($(this).val() =="") 
+$(this).css( "background-color", "white");
+         else
+         
+        $(this).css("background-color", "#ffff99");
+});
+});
+</script>
+
+
+
+
+<script type="text/javascript">
+function PreviewImage() {
+	var oFReader =new FileReader();
+	oFReader.readAsDataURL(document.getElementById("image").files[0]);
+	oFReader.onload=function(oFREvent){
+		document.getElementById("uploadPreview").src= oFREvent.target.result;
+	};
+};
+
+function mobvalidate(key)
+{
+var keycode;
+keycode=(key.which)?key.which:key.keyCode;
+var phn=document.getElementById('mobno');
+if(!(keycode==8 || keycode==46) && (keycode <48 || keycode>57))
+return false;
+
+else
+{
+if(phn.value.length<10)
+{
+return true;
+}
+else{
+return false;
+}
+}}
+ 
+
+function pinvalidate(key)
+{
+var keycode;
+keycode=(key.which)?key.which:key.keyCode;
+var phn=document.getElementById('pinno');
+if(!(keycode==8 || keycode==46) && (keycode <48 || keycode>57))
+return false;
+
+else
+{
+if(phn.value.length<6)
+{
+return true;
+}
+else{
+return false;
+}
+}}
+
+ window.onload=function()
+{
+var select=document.getElementById('selectid');
+for(i=2016;i>=1850;i--)
+{
+var opt=document.createElement('OPTION');
+
+opt.innerHTML=i;
+select.add(opt);
+}}
+
+
+
+
+
+
+</script>
+</head>
+<form class="bookform" action="bookselfinsert.php" method="post" enctype="multipart/form-data">
+<div id="main-wrapper">
+<center><h2>Register Your Book</h2>
+</center>
+
+
+
+<label><b>Choose the Genre of Your Book:</b></label><br>
+<select class="genre"  name="genre" >
+<option value="Satire">Satire</option>
+<option value="Science Fiction">Science Fiction</option>
+<option value="Drama">Drama</option>
+<option value="Novel">Novel</option>
+<option value="Engineering">Engineering</option>
+<option value="poetry">Poetry</option>
+<option value="Action & Adventure">Action & Adventure</option>
+<option value="Romance">Romance</option>
+<option value="Horror">Horror</option>
+<option value="Mystery">Mystery</option>
+<option value="Self Help">Self Help</option>
+</select>
+<br>
+<div id="fix">
+
+<img id="uploadPreview" src="avatar.png" class="avatar"/><br>
+<input type="file" id="image" name="image"    accept=".jpg,.jpeg,.png" onchange="PreviewImage();"/><br>
+<br>
+</div>
+<label><b>	Book title:</b></label><br>
+<input name="booktitle" type="text" class="inputvalues" placeholder="Enter Book title*" style="text-transform:uppercase" required/><br>
+<br>
+<label><b>Publication:</b></label><br>
+<input name="publication" type="text" class="inputvalues" placeholder="Enter Publication*" style="text-transform:uppercase" required/><br>
+<br>
+
+<label><b>Year of Publication:</b></label><br>
+<!--<input name="publication" type="text" class="inputvalues" placeholder="Enter Publication*" required/><br>-->
+<select name="selectpub" id="selectid"  > 
+
+</select>
+<br><br>
+<label><b>Edition:</b></label><br>
+<input name="edition" type="text" class="inputvalues" placeholder="Enter Edition*" style="text-transform:uppercase" required/><br>
+<br>
+
+<label><b>Author:</b></label><br>
+<input name="author" type="text" class="inputvalues" placeholder="Enter Author*" style="text-transform:uppercase" required/><br>
+<br>
+<label><b>Price:</b></label><br>
+<input name="price" type="number" class="inputvalues" placeholder="Enter Your Price*" required/><br><br>
+<label><b>Enter Date:</b></label>
+<br>
+  <input type="date" name="date"  style="width: 180px;" class="inputvalues" required/><br>
+<br>
+
+<button name="submit_btn" type="submit" id="signup_btn" value="Submit"><b>Submit</b></button>
+</form>
+
+</div>
+</body>
+</html>

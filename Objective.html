@@ -1,0 +1,37 @@
+<html>
+<script>
+var c=0;
+    function chng(){
+	if(c%2==0)
+	   document.getElementById("di").style="border:3px solid red;";
+	else
+	   document.getElementById("di").style="border:3px solid blue;";
+	   c++;
+	   setTimeout(function(){chng();},200);
+	}
+</script>
+<head>
+  <style>
+       #di{
+		  color:white;
+		  background-color:blue;
+		  font-size:30;
+		  width:400px;
+	   }
+  </style>
+</head>
+<div style="background-color:grey;float:left">
+<h1>OBJECTIVE&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp </h1>
+</div>
+<body style="background-color:lightgrey" onload="chng()">
+  <br><br><br><br><br><hr>
+  <center>
+     <div id="di">
+	        We aim to Provide a platform for the two Groups of people; first who don't have money to buy books
+			and Second who have read the book but don't know what to do with the book.
+                  Affordable books to everyone. Knowledge is Power and sharing this power increases it.	
+	 </div>
+  </center>
+  </body>
+</html>

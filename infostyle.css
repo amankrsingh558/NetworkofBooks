@@ -1,0 +1,139 @@
+body{
+	background: linear-gradient(to right bottom,white);
+	height: 670px;
+}
+#showbox1{
+	position: fixed;
+	width:100%;
+	height: 80px;
+	color:green;
+	border:1px,solid black; 
+	background: gray;
+	left: 0;
+	top: 0;
+}
+
+#showbox2{
+	position: fixed;
+	width:20%;
+	height:450px;
+	border:1px solid black;
+	background-color: blue;
+	left: 0; 
+	top: 81px ;
+}
+
+#showbox3{
+	padding: 0.5em;
+	position: fixed;
+	color: white;
+	background-color: black;
+	text-align: center;
+	top: 635px;
+	width: 100%;
+	height: 50px;
+	left:0;
+}
+
+#showbox4{
+	position: fixed;
+	background-color: gray;
+	top: 540px;
+	width:20%;
+	height: 93px;
+	left: 0;
+	border:1px solid black;
+
+}
+
+#showbox5{
+	position: fixed;
+	background-color: green;
+	top: 81px;
+	left: 1050px;
+	width: 295px;
+	height: 552px;
+	border:1px solid black;
+}
+
+#showbox6{
+	position: fixed;
+	top: 81px;
+	width: 760px;
+	height: 554px;
+	border:1px solid black;
+	left:280px;
+}
+
+#showbox7{
+	position: fixed;
+	top:150px;
+	width: 500px;
+	height: 450px;
+	left: 400px;
+	padding:5px; 
+}
+
+
+
+
+
+
+.profile-pic {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    overflow: hidden;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    -ms-border-radius:50%;
+    -o-border-radius:50%;
+    border-radius: 50%;
+}
+
+#imageupload{
+display: none;
+}
+
+#profileimage{
+	cursor: pointer;
+}
+
+
+#profile-pic img{
+	width: 150px;
+	height: 150px;
+}
+
+.add{
+	border-radius: 10px/10px;
+	width: 250px;
+	height: 20px;
+}
+
+
+
+
+.address{
+	border-radius: 10px/10px;
+	width: 100px;
+	height: 20px;
+}
+
+#submit1{
+	background-color: green;
+	width: 80px;
+	height: 30px;
+	font-size: 20px;
+	border-radius: 10px/10px;
+	color: white;
+}
+
+#submit2{
+	background-color: #b3ffff;
+	width: 80px;
+	height: 10px;
+	font-size: 10px;
+	border-radius: 10px/10px;
+	
+}

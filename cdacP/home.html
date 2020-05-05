@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>home page</title>
+
+  <link rel="stylesheet" type="text/css" href="home.css">
+  
+
+  <script type="text/javascript">
+    
+function shown(){
+  document.getElementById("op").style="background-image: url('ones.jpg');height:50px;width:50px;";
+}
+function showno(){
+  document.getElementById("op").style="background-image: url('one.jpg');height:50px;width:50px;";
+}
+function shownt(){
+  document.getElementById("opp").style="background-image: url('twos.jpg');height:50px;width:50px;";
+}
+function shownot(){
+  document.getElementById("opp").style="background-image: url('two.jpg');height:50px;width:50px;";
+}
+    function show(a)
+    {
+	
+      if (a===0||a===1||a===4||a===2)
+      {
+     document.getElementById("showbox1").style="display:block";
+      }
+
+      if(a===3||a===5)
+      {
+              document.getElementById("showbox1").style="display:block";
+              document.getElementById("showbox2").style="display:block";
+
+      }
+      if(a===7||a===6)
+      {
+	  
+        document.getElementById("showbox3").style="display:block";
+      }
+     if(a==0)
+	shownt();
+	if(a==7)
+	   shown();
+    }
+       
+    function hide(a)
+    {  
+
+
+      if(a!==1||a!==2||a!==5)
+      {
+      document.getElementById("showbox1").style="display:none";
+      document.getElementById("showbox2").style="display:none";
+     }
+     if(a!==6||a!==7)
+     {
+      document.getElementById("showbox3").style="display:none";
+     }
+	 	if(a==7)
+	showno();
+	if(a==0)
+	shownot();
+   }
+  </script>
+
+</head>
+
+<body>
+
+
+
+
+<div id="home1"></div>
+
+<ul>
+<li> &nbsp </li>
+<li> &nbsp </li><li> &nbsp </li><li> &nbsp </li><li> &nbsp </li><li> &nbsp </li><li> &nbsp </li>
+  <li style="background-image: url('one.jpg');height:50px;width:50px;" id="op" onmouseenter="show(7)" onmouseleave="hide(7)"></li>
+  <li> &nbsp </li><li> &nbsp </li><li> &nbsp </li><li> &nbsp </li><li> &nbsp </li>
+  <li style="background-image: url('two.jpg');height:50px;width:60px;" id="opp" onmouseenter="show(0)" onmouseleave="hide(0)"></li>
+  <li> &nbsp </li><li> &nbsp </li><li> &nbsp </li><li> &nbsp </li><li> &nbsp </li>
+  <li><a href="#People">People</a></li>
+  <li><a href="#Home" title="click to go home page">Home</a></li>
+    
+
+  <form   action="search1.php" method="POST" id="searchBox" />
+      <input type="text"  style="font-type:arial" id="searchBox" name="match" placeholder="Search..." value="" maxlength="25" autocomplete="off" />
+     <input type="submit" name="submit" value="Find" />
+    </form>
+
+</ul>
+
+</div>
+
+
+
+<div id="showbox1" onmouseenter="show(1)" onmouseleave="hide(1)">
+  <ul>
+  <li><a href="#Activity" class="active" onmouseenter="show(2)">&nbsp&nbsp Activity log &nbsp</a></li>
+  <li><a href="#settings" class="active" onmouseenter="show(3)" onmouseleave="hide(3)">&nbsp&nbsp&nbsp&nbsp&nbsp&nbspSettings&nbsp&nbsp</a></li>
+  <li><a href="lgout.php" class="active" onmouseenter="show(4)">&nbsp&nbsp&nbsp&nbspLog out&nbsp&nbsp&nbsp</a></li>
+</div>
+
+
+
+<div id="showbox2" onmouseenter="show(5)" onmouseleave="hide(5)">
+
+   <ul>
+  <li><a href="#Acc" class="active" >&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspAccount&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+  <li><a href="#settings" class="active" >Change Profile Picture</a></li>
+  <li><a href="chngpass.php" class="active">&nbsp&nbsp&nbspChange Password&nbsp</a></li>
+  <li><a href="chngSQ" class="active" >Change Security Question</a></li>
+</ul>
+
+</div>
+
+
+<div id="showbox3" onmouseenter="show(6)" onmouseleave="hide(6)">
+
+<ul>
+<li><a href="Activitylog.htm" class="active">Ask Question</a></li>
+<li><a href="#report" class="active">Report a Problem</a></li>
+<li><a href="#faq" class="active">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbspFAQ&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</a></li>
+</ul>
+
+</div>
+
+<!--
+<iframe src="report.html" id="iframe1"></iframe>
+<iframe src="about.html" id="secD"></iframe>
+
+<iframe src="message.html" id="msgbox"></iframe>-->
+<iframe src="about.html" style="width:220px;height:600px;display:inline;float:left;" scrolling="no" marginwidth="0" marginheight="0" frameborder="1"></iframe>
+
+<iframe  src="contact.html" style="width:600px;height:100px;bottom:400px;display:block;" scrolling="no" marginwidth="0" marginheight="0" frameborder="5"></iframe>
+<iframe  src="contact.html" style="width:600px;height:400px;bottom:400px;display:inline-block;" scrolling="no" marginwidth="0" marginheight="0" frameborder="1"></iframe>
+<iframe align="top" src="contact.html" style="width:160px;height:200px;display:inline-block;vertical-align: top;float:top;" scrolling="no" marginwidth="0" marginheight="0" frameborder="1"></iframe>
+
+<iframe align="top" src="about.html" style="width:220px;height:600px;float:right;display:block;vertical-align: top;" scrolling="no" marginwidth="0" marginheight="0" frameborder="1"></iframe>
+
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<?php
+
+  session_start();
+  if(!isset($_SESSION['q']))
+  {
+	  header('location:signup_page.php');
+	  die();
+  }
+
+
+
+$email=$_SESSION['email'];
+ 
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body{
+	font-family:arial;
+	margin:0px;
+}
+ul{
+	list-style-type:none;
+	position:fix;
+}
+li:hover{
+	BORDER-top:2PX SOLID #ae5bd7;
+	background-color:#ebd6f5;
+}
+li{
+	padding:10px;
+}
+a{
+	text-decoration:none;
+	color:black;
+	font-size:25px;
+	margin-left:0px;
+}
+</style>
+</head>
+<body>
+<ul>
+
+<li><a href="fiction.php" target="center">Science fiction</a></li>
+<li><a href="satire.php" target="center">Satire</a></li>
+<li><a href="action.php" target="center">Action and Adventure</a></li>
+<li><a href="drama.php" target="center">Drama</a></li>
+<li><a href="romance.php" target="center">Romance</a></li>
+<li><a href="mystery.php"target="center">Mystery</a></li>
+<li><a href="horror.php" target="center">Horror</a></li>
+<li><a href="self.php" target="center">Self help</a></li>
+
+<li><a href="poetry.php" target="center">Poetry</a></li>
+<li><a href="novel.php" target="center">Novel</a></li>
+
+<li><a href="engineering.php" target="center">Engineering</a></li>
+</ul>
+</body>
+</html>

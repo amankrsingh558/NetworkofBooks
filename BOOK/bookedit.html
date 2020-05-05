@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<style>
+#edittd{
+width:20px;
+
+
+}
+
+#removetd{
+width:20px;
+}
+
+
+</style>
+
+
+
+<title>Edit Your Book</title>
+<!--<link rel="stylesheet" href="style1.css">-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+</head>
+</body>
+<form name="bookdetails" action="account.php" method="post" enctype="multipart/form-data">
+<button type="submit" name="bookdetails">BookDetails</button>
+
+<table border="1" align="center" width="100%" height="100%">
+<th colspan="8">Your BookSelf</th>
+<tr>
+
+<td>S.no</td>
+<td>Genre</td>
+<td>Book Title</td>
+<td>Publication</td>
+<td>Author</td>
+<td>Price</td>
+<td id="edittd">Edit
+<button type="submit" name="edit"  >edit</button>
+</td>
+
+<td id="removetd">Remove
+<button type="submit" name="remove" id="removeid">Remove</button>
+</td>
+</tr>
+
+
+
+
+</table>
+</form>
+</body>
+</html>

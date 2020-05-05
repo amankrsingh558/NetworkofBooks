@@ -1,0 +1,18 @@
+
+  
+  <script>
+       function chngimg(v){
+	      var fr=new FileReader();
+		  fr.readAsDataURL(v.files[0]);
+		  fr.onload=function(oFREvent){
+		document.getElementById("im").src= oFREvent.target.result;
+	};
+	   }
+  </script>
+  <table style="float:right"><tr><td align="center" >
+  <img src="pic.png" style="border-radius:50%;height:150px;width:150px;" src="ety.jpg" id="im"><br>
+  </td></tr><tr><td border="1"> &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp 
+      <input  type="file" value="Upload Image" id="fl" onchange="chngimg(this)">
+	  </td></tr></table>
+	  
+  

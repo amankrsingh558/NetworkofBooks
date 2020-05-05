@@ -1,0 +1,108 @@
+body{
+    height: 700px;
+}
+
+#home1{
+    margin-left: 0;
+    height: 80px;
+    width:100%;
+    top: 0;
+    border:1px solid black; 
+    background-color: lightgreen;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color:#959595;
+}
+
+li{
+     float :right;
+}
+
+li a{
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+li a:hover {
+    background-color: #111111;
+}
+
+li a:active{
+   background-color: green;
+}
+ul form{
+    margin-left:15px;
+    padding: 10px;
+}
+
+
+#iframe1{
+
+left: 0;
+top:110px;
+width: 250px;
+height: 600px;
+}
+#secD{
+left: 100px;
+top:10px;
+width: 100px;
+height: 200px;
+float:right;
+}
+
+
+#showbox1{
+    top:136px;
+    position: fixed;
+    width: 108px;
+    height: 142px;
+    display:none;
+    left:1220px;
+    border:1px solid black;
+}
+
+.active{
+    font-size: 18px;
+
+}
+
+
+
+#showbox2{
+     top:200px;
+    position: fixed;
+    width: 167px;
+    height: 205px;
+    display:none;
+    left:1052px;
+    border:1px solid black;
+}
+
+#msgbox{
+
+margin-left: 820px;
+top:110px;
+width: 250px;
+height: 600px;
+}
+
+
+#showbox3{
+top:130px;
+    position: fixed;
+    width: 115px;
+    height: 165px;
+    display:none;
+    left:1230px;
+    border:1px solid black;
+}

@@ -1,0 +1,284 @@
+
+<?php
+  require 'dbconfig/config.php';
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Register Your Book</title>
+<link rel="stylesheet" href="style1.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+$("input").focusin(function(){
+$(this).css("background-color","#ffff99");
+});
+$("input").focusout(function(){
+
+if ($(this).val() =="") 
+$(this).css( "background-color", "white");
+         else
+         
+        $(this).css("background-color", "#ffff99");
+});
+});
+
+
+
+$(document).ready(function(){
+$("select").focusin(function(){
+$(this).css("background-color","#ffff99");
+});
+$("select").focusout(function(){
+
+if ($(this).val() =="") 
+$(this).css( "background-color", "white");
+         else
+         
+        $(this).css("background-color", "#ffff99");
+});
+});
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+<script type="text/javascript">
+function PreviewImage() {
+	var oFReader =new FileReader();
+	oFReader.readAsDataURL(document.getElementById("imglink").files[0]);
+	oFReader.onload=function(oFREvent){
+		document.getElementById("uploadPreview").src= oFREvent.target.result;
+	};
+};
+
+
+
+function mobvalidate(key)
+{
+var keycode;
+keycode=(key.which)?key.which:key.keyCode;
+var phn=document.getElementById('mobno');
+if(!(keycode==8 || keycode==46) && (keycode <48 || keycode>57))
+return false;
+
+else
+{
+if(phn.value.length<10)
+{
+return true;
+}
+else{
+return false;
+}
+}}
+
+
+function pinvalidate(key)
+{
+var keycode;
+keycode=(key.which)?key.which:key.keyCode;
+var phn=document.getElementById('pinno');
+if(!(keycode==8 || keycode==46) && (keycode <48 || keycode>57))
+return false;
+
+else
+{
+if(phn.value.length<6)
+{
+return true;
+}
+else{
+return false;
+}
+}}
+
+
+
+
+
+
+
+</script>
+
+
+</head>
+
+
+<form class="bookform" action="register.php" method="post" >
+<div id="main-wrapper">
+<center><h2>Register Your Book</h2>
+<img id="uploadPreview" src="avatar.png" class="avatar"/><br>
+<input type="file" id="imglink" name="imglink" accept=".jpg,.jpeg,.png" onchange="PreviewImage();"/>
+
+</center>
+
+
+
+<label><b>Choose the Genre of Your Book:</b></label><br>
+<select class="genre"  name="genre" >
+<option value="satire">Satire</option>
+<option value="sciencefiction">Science Fiction</option>
+<option value="drama">Drama</option>7
+<option value="novel">Novel</option>
+<option value="engineering">Engineering</option>
+<option value="poetry">Poetry</option>
+</select>
+<br>
+
+<label><b>	Book title:</b></label><br>
+<input name="booktitle" type="text" class="inputvalues" placeholder="Enter Book title*" required/><br>
+
+<label><b>Publication:</b></label><br>
+<input name="publication" type="text" class="inputvalues" placeholder="Enter Publication*" required/><br>
+
+<label><b>Author:</b></label><br>
+<input name="author" type="text" class="inputvalues" placeholder="Enter Author*" required/><br>
+
+<label><b>Price:</b></label><br>
+<input name="price" type="number" class="inputvalues" placeholder="Enter Your Price*" required/><br>
+
+
+<label><b>City:</b></label><br>
+<input name="city" type="text" class="inputvalues" placeholder="Enter Your City*" required/><br>
+
+
+
+<label><b>Mobile no:</b></label><br>
+ <input name="mobileno" type="text" class="inputvalues" id="mobno" onkeypress="return mobvalidate(event)" title="Enter your mobile number*" required/><br>
+
+
+ 
+<label><b>Pincode:</b></label><br>
+<input name="pincode" type="text" class="inputvalues" id="pinno" placeholder="Enter Pincode*" onkeypress="return pinvalidate(event)" required/><br>
+
+<label><b>Email:</b></label><br>
+<input name="email" type="email" class="inputvalues" placeholder="Enter your email*"  pattern="[a-z0-9._%+-]+@cvrce+\.com$" required/><pre style="color:red">* example@cvrce.com</pre>
+<i style="color:red">* required fields</b>
+
+<button name="submit_btn" type="submit" id="signup_btn" value="Submit"><b>Submit</b></button>
+<!--<a href="login1.php"><input type="button" id="back_btn" value="Back"/></a>
+
+-->
+
+
+</form>
+
+
+
+
+<?php
+if(isset($_POST['submit_btn']))
+{//echo '<script type="text/javascript">alert("Sign up button clicked")</script>';
+
+$genre =$_POST['genre'];
+$booktitle=$_POST['booktitle'];
+$publication =$_POST['publication'];
+
+$author=$_POST['author'];
+$price =$_POST['price'];
+$mobileno =$_POST['mobileno'];
+$pincode =$_POST['pincode'];
+
+$email =$_POST['email'];
+
+
+$query_run= mysqli_query($con,$query);
+$query="insert into bookself values('','$genre','$booktitle','$publication','$author','$price','$mobileno','$pincode')";
+if($query_run)
+	{
+		echo '<script type="text/javascript">alert("Thank You!Your book have been Registered for Sale.")</script>';
+	}
+}
+
+
+/*$img_name = $_FILES['imglink']['name'];
+$img_size = $_FILES['imglink']['size'];
+$img_tmp = $_FILES['imglink']['tmp_name'];
+
+$directory = 'uploads/';
+$target_file = $directory.$img_name;
+*/
+
+
+
+
+
+/*if($password==$cpassword)
+{
+$query= "select * from userinfotable WHERE username='$username'";
+$query_run= mysqli_query($con,$query);
+
+if(mysqli_num_rows($query_run)>0)
+{
+	
+	echo '<script type="text/javascript">alert("user already exist")</script>';
+}
+
+////////////////////////////////////////////////
+else if(file_exists($target_file))
+{
+	echo '<script type="text/javascript">alert("Image File Already Exist .Try Another Image File"</script>';
+
+}
+else if($img_size>2097152)
+{
+	
+	echo '<script type="text/javascript">alert("Image size larger than 2mb")</script>';
+}
+
+else{
+	move_uploaded_file($img_tmp,$target_file);
+$query="insert into userinfotable values('','$fullname','$gender','$qualification','$registeration','$contact','$username','$password','$target_file')";
+$query_run= mysqli_query($con,$query);
+
+
+
+
+
+
+
+
+
+	$query="insert into userinfotable values('','$fullname','$gender','$qualification','$username','$password')";
+	$query_run= mysqli_query($con,$query);*/
+	
+	
+	/*else
+	{
+		echo '<script type="text/javascript">alert("error")</script>';
+
+}*/
+/*else
+{
+echo '<script type="text/javascript">alert("Password AND confirm Password doesnot match ")</script>';
+}*/
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</body>
+</html>

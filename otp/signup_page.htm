@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bookipedia</title>
+	<style>
+#year,#mon,#dt{
+ width: 80px;
+	height: 25px;
+	font-size: 20px;
+	border-radius: 10px/10px;
+}
+
+</style>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<form class="header">
+		<div id="form1" class="header">Email<br/>
+		<input type="text" name="name" placeholder="username" required  /><br/>
+		</div>
+		<div id="form2" class="header" >password<br/>
+		<input type="password" name="password" placeholder="password" required/><br/>
+        <input type="submit" value="login" class="submit1"/>
+	    <a href="fpassword.htm" style="color: black;" >Forgotten password!</a></div>
+    </form>
+
+<div class="bodyx">
+	<div id="intro1" class="bodyx"> helps you connect and share knowledge</div>
+	<div id="intro2" class="bodyx">Create an Account</div>
+
+<form id="form3" class="bodyx" action="/abc.php">
+<input type="text" name="fname" id="namebox" placeholder="Firstname" required />
+<input type="text" id="namebox" placeholder="Lastname" name="lname" required /><br/>
+<input type="email" id="mailbox" placeholder="Enter Email" name="mail" required /><br/>
+
+
+
+
+
+
+
+
+
+
+
+
+<input type="password" name="pass" id="mailbox" placeholder="Enter Password" required /><br/>Birthday<br>
+<script src="Date.js"></script>
+<select id="year" class="birth" onblur="Ylook()">
+  <script>
+     for(var i=2018;i>1950;i--)
+	   document.write("<option>"+i+"</option>");
+  </script>
+</select>
+-
+<select id="mon" onblur="Mlook()">
+<script>
+var A=["January","Feburary","March","April","May","June","July","August","September","October","November","December"];
+for(var i=0;i<12;i++){
+  document.write("<option>"+A[i]+"</option>");
+}
+</script>
+</select>
+
+<select id="dt"></select>
+<br>
+<input type="radio" name="gender" id="male" value="male" required>Male
+<input type="radio" name="gender" id="female" value="female" required>Female<br>
+<textarea rows="5" cols="50" id="address" placeholder="Enter Address" required></textarea><br>
+Security Question<br>
+<select id="SecurityQ" required>
+	<option value="abc">abc</option>
+	<option value="def">def</option>
+	<option value="xyz">xyz</option>
+</select><br>Answer<br>
+<input type="text" id="namebox" placeholder="Your Answer" required><br>
+
+<input type="text" id="mailbox" placeholder="Enter mobile" name="mobile" required /><br/>
+
+
+<input type="text"  id="otpid" name="otp"  placeholder="Enter otp" maxlength="5" required />
+
+
+
+
+<input type="submit" id="button2" value="Create Account" name="sendotp" />
+</form>
+</div>
+</body>
+</html>

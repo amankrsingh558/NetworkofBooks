@@ -1,0 +1,154 @@
+body{
+	 background-image:url('86132.jpg');
+	 background-size:100%;
+	 background-repeat:no-repeat;
+}
+.bt{
+   border:0px;
+   background-color:none;
+   width:100px;
+   height:30px;
+   font-weight:bold;
+}
+
+.header{
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	top: 0;
+	left: 0;
+	color:white;
+	z-index: 1;
+	font-family: Bradley Hand ITC;
+	font-size:20px;
+}
+
+#form1{
+	left: 700px;
+	top: 20px;
+	height: 60px;
+	width: 180px;
+}
+
+#form2{
+	left:895px;
+	top: 20px;
+	height: 60px;
+	width: 200px;
+}
+
+.submit1{
+	left: 1100px;
+	top: 39px;
+	background:white;
+	color: white;
+	position: fixed;
+	z-index: 20;
+	height: 22px;
+	width: 50px;
+	cursor: pointer;
+}
+
+.bodyx
+{
+	position: absolute;
+	left: 0;
+	top:100px;
+	width:100%;
+	height: 645px;
+	padding:10px;
+}
+
+#intro1{
+	top:40px;
+	left: 100px;
+	font-family: verdana;
+	font-size: 30px;
+	color: white;
+	height: 75px;
+	width:550px;
+}
+
+#intro2{
+	top: 30px;
+	left: 700px;
+	font-size: 40px;
+	font-family: verdana;
+	color: white;
+	width:500px;
+	height:60px;
+}
+
+#form3{
+	top:100px;
+	left: 800px;
+	font-family: verdana;
+	font-size: 20px;
+	color: white;
+	width: 450px;
+	height: 500px;
+}
+
+#namebox{
+	width: 140px;
+	height: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 20px;
+	border:none;
+}
+#mailbox{
+	width: 310px;
+	height: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 20px;
+	border:none;
+}
+
+
+.birthday{
+	width: 180px;
+	height: 10px;
+	font-size: 20px;
+	border-radius: 10px/10px;
+	background-color: white;
+	padding: 10px;
+}
+
+#button2{
+	width: 150px;
+	height: 30px;
+	top:320px;
+	left: 100px;
+	background-color:darkorchid;
+	position: absolute;
+	color: white;
+	border-radius: 15px/15px;
+	cursor: pointer;
+	outline: none;
+	font-size: 15px;
+}
+
+#year,#dt{
+ width: 80px;
+	height: 25px;
+	font-size: 20px;
+	border-radius: 10px/10px;
+}
+#mon{
+	width: 130px;
+	height: 25px;
+	font-size: 20px;
+	border-radius: 10px/10px;
+}
+
+#mobval{
+
+width: 310px;
+	height: 10px;
+	border-radius: 10px;
+	padding: 10px;
+	font-size: 20px;
+	border:none;
+}

@@ -1,0 +1,123 @@
+//   Old relaced by inline extensively
+body{
+	background: linear-gradient(to right bottom,white);
+	height: 670px;
+}
+table{
+	background-color:lightblue;
+	color:blue;
+	font-size:30px;
+}
+#showbox1{
+	position: relative;
+	width:100%;
+	height: 80px;
+	color:green;
+	border:1px,solid black; 
+	background: gray;
+	left: 0;
+	top: 0;
+}
+#pic{
+	border:20x solid red;
+	border-radius:50%;
+	left:900px;
+	top:300px;
+}
+#div1{
+	position: relative;
+	left: 80px;
+	top: 15px;
+	width: 800px;
+	height: 20px;
+	font-size: 50px;
+	font-family: verdana;
+	color: white;
+}
+
+#showbox2{
+	position: relative;
+	width:15%;
+	height:350px;
+	border:1px solid black;
+	background-color: blue;
+	left: 0; 
+	top: 81px ;
+}
+
+#showbox3{
+	position:relative;
+	bottom:10px;
+	padding: 0.5em;
+	color: white;
+	background-color: black;
+	text-align: center;
+	top: 635px;
+	width: 100%;
+	height: 50px;
+	left:0;
+}
+
+#showbox4{
+	background-color: red;
+	top: 54;
+	width:15%;
+	height: 90px;
+	left: 0;
+	border:1px solid black;
+
+}
+
+#showbox5{
+	position: relative;
+	background-color: green;
+	top: 81px;
+	left: 1050px;
+	width: 295px;
+	height: 552px;
+	border:1px solid black;
+}
+
+#showbox6{
+	position: relative;
+	top: 81px;
+	width: 850px;
+	height: 554px;
+	border:0;
+	left:280px;
+}
+
+#showbox7{
+	position: relative;
+	top:150px;
+	overflow:scroll;
+	width: 500px;
+	left: 600px;
+	padding:5px; 
+}
+
+
+
+.add{
+	border-radius: 10px/10px;
+	width: 250px;
+	height: 20px;
+}
+
+.address{
+	border-radius: 10px/10px;
+	width: 100px;
+	height: 20px;
+}
+
+#submit1{
+	top: 420px;
+	left: 180px;
+	background-color: green;
+	width: 80px;
+	height: 30px;
+	font-size: 20px;
+	border-radius: 10px/10px;
+	color: white;
+	position: absolute;
+}

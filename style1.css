@@ -1,0 +1,60 @@
+#main-wrapper{
+width:480px;
+margin: 0 auto;
+background:white;
+padding: 5px;
+border-radius:10px;
+border: 2px solid #2c3e50;
+opacity:1;
+background-image:url('people.jpg');
+repeat:no-repeat;
+background-size:cover;
+
+
+}
+
+body{
+background-image:url('bookform3.jpg');
+background-size:cover;
+}
+.avatar{
+	width:100px;
+	text-align:center;
+	border-radius:50%;
+}
+.bookform{
+	width:880px;
+	margin:0 auto;
+	
+	
+}
+
+
+
+
+.inputvalues{
+	width:430px;
+	margin:0 auto;
+	padding:5px;
+	outline:none;
+}
+
+
+
+#signup_btn{
+	margin-bottom:20px;
+	margin-top:8px;
+	background-color:#3498db;;
+	padding:13px;
+	color:white;
+	width:100%;
+	text-align:center:
+	font-size:18px;
+	font-weight:bold;
+}
+
+
+
+
+
+

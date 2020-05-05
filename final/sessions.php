@@ -1,0 +1,14 @@
+<?php
+session_start();
+$_SESSION['aa']=0;
+$_SESSION['bb']=0;
+$_SESSION['cc']=0;
+$_SESSION['dd']=0;
+$_SESSION['ee']=0;
+$_SESSION['ff']=0;
+$_SESSION['gg']=0;
+$_SESSION['hh']=0;
+$_SESSION['ii']=0;
+$_SESSION['jj']=0;
+header('location:signup_page.php');
+?>
